@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple - CyberNova</title>
+    <link rel="stylesheet" href="/CSS/marcas.css">
+</head>
+<body>
+
+    <!-- Header marca -->
+    <div class="brand-header">
+        <div class="container brand-header-content">
+            <div class="brand-info">
+                <div class="brand-logo apple"></div>
+                <div>
+                    <h1>Apple</h1>
+                    <p>5 laptops disponibles · Envío gratis en todos los modelos</p>
+                </div>
+            </div>
+            <button class="close-btn" onclick="history.back()">✕</button>
+        </div>
+    </div>
+
+    <!-- Filtros -->
+    <div class="container">
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterLaptops('all', this)">Todos</button>
+            <button class="filter-btn" onclick="filterLaptops('macbookair', this)">MacBook Air</button>
+            <button class="filter-btn" onclick="filterLaptops('macbookpro', this)">MacBook Pro</button>
+            <button class="filter-btn" onclick="sortLaptops('asc', this)">Menor precio</button>
+            <button class="filter-btn" onclick="sortLaptops('desc', this)">Mayor precio</button>
+        </div>
+    </div>
+
+    <!-- Catálogo -->
+    <section class="catalog">
+        <div class="container">
+            <div class="catalog-grid" id="catalog-grid">
+
+                <!-- MacBook Air M3 13" -->
+                <div class="laptop-card" data-category="macbookair" data-price="1099">
+                    <div class="card-img">
+                        <img src="/IMG/MacBook Air 13 M3.png" alt="MacBook Air M3">
+                    </div>
+                    <span class="badge-card blue">Ultraligera</span>
+                    <h3>MacBook Air 13" M3</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Apple M3 8-core CPU</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>8GB Unified Memory</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>256GB SSD</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>8-core GPU</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>13.6" Liquid Retina 2560×1664</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>52.6Wh · hasta 18h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>1.24 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>macOS Sonoma</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (12 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">7.500 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- MacBook Air M3 15" -->
+                <div class="laptop-card" data-category="macbookair" data-price="1299">
+                    <div class="card-img">
+                        <img src="/IMG/MacBook Air 15 M3.png" alt="MacBook Air M3 15">
+                    </div>
+                    <span class="badge-card blue">Ultraligera</span>
+                    <h3>MacBook Air 15" M3</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Apple M3 8-core CPU</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>8GB Unified Memory</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>256GB SSD</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>10-core GPU</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>15.3" Liquid Retina 2880×1864</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>66.5Wh · hasta 18h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>1.51 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>macOS Sonoma</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (8 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">8.900 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- MacBook Pro 14" M3 -->
+                <div class="laptop-card" data-category="macbookpro" data-price="1599">
+                    <div class="card-img">
+                        <img src="/IMG/MacBook Pro 14 M3.png" alt="MacBook Pro 14 M3">
+                    </div>
+                    <span class="badge-card purple">Pro</span>
+                    <h3>MacBook Pro 14" M3</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Apple M3 8-core CPU</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>8GB Unified Memory</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>10-core GPU</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>14.2" Liquid Retina XDR 3024×1964</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>70Wh · hasta 22h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>1.55 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>macOS Sonoma</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (6 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">11.000 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- MacBook Pro 14" M3 Pro -->
+                <div class="laptop-card" data-category="macbookpro" data-price="1999">
+                    <div class="card-img">
+                        <img src="/IMG/MacBook Pro 14 M3 Pro.png" alt="MacBook Pro 14 M3 Pro">
+                    </div>
+                    <span class="badge-card purple">Pro Power</span>
+                    <h3>MacBook Pro 14" M3 Pro</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Apple M3 Pro 11-core CPU</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>18GB Unified Memory</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>14-core GPU</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>14.2" Liquid Retina XDR 3024×1964</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>70Wh · hasta 18h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>1.61 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>macOS Sonoma</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (4 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">13.700 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- MacBook Pro 16" M3 Max -->
+                <div class="laptop-card" data-category="macbookpro" data-price="3499">
+                    <div class="card-img">
+                        <img src="/IMG/MacBook Pro 16 M3 Max.png" alt="MacBook Pro 16 M3 Max">
+                    </div>
+                    <span class="badge-card purple">Pro Max</span>
+                    <h3>MacBook Pro 16" M3 Max</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Apple M3 Max 16-core CPU</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>36GB Unified Memory</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>1TB SSD</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>40-core GPU</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>16.2" Liquid Retina XDR 3456×2234</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>100Wh · hasta 22h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>2.14 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>macOS Sonoma</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (2 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">23.000 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="/JS/script.js"></script>
+</body>
+</html>

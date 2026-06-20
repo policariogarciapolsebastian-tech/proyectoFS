@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptops Gaming - CyberNova</title>
+    <link rel="stylesheet" href="/CSS/laptops.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="brand-header">
+        <div class="container brand-header-content">
+            <div class="brand-info">
+                <div class="brand-logo gaming">🎮</div>
+                <div>
+                    <h1>Laptops Gaming</h1>
+                    <p>10 laptops disponibles · Potencia extrema para gamers</p>
+                </div>
+            </div>
+            <button class="close-btn" onclick="history.back()">✕</button>
+        </div>
+    </div>
+
+    <!-- Filtros -->
+    <div class="container">
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterLaptops('all', this)">Todos</button>
+            <button class="filter-btn" onclick="filterLaptops('lenovo', this)">Lenovo</button>
+            <button class="filter-btn" onclick="filterLaptops('dell', this)">Dell</button>
+            <button class="filter-btn" onclick="filterLaptops('hp', this)">HP</button>
+            <button class="filter-btn" onclick="filterLaptops('asus', this)">Asus</button>
+            <button class="filter-btn" onclick="sortLaptops('asc', this)">Menor precio</button>
+            <button class="filter-btn" onclick="sortLaptops('desc', this)">Mayor precio</button>
+        </div>
+    </div>
+
+    <!-- Catálogo -->
+    <section class="catalog">
+        <div class="container">
+            <div class="catalog-grid" id="catalog-grid">
+
+                <!-- Lenovo Legion 5 Pro -->
+                <div class="laptop-card" data-category="lenovo" data-price="1399">
+                    <div class="card-img">
+                        <img src="/IMG/Legion 5 Pro Gen 8.png" alt="Legion 5 Pro">
+                    </div>
+                    <span class="badge-card red">Gaming</span>
+                    <h3>Legion 5 Pro Gen 8</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>AMD Ryzen 7 7745HX</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>32GB DDR5 4800MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>1TB SSD NVMe PCIe 4.0</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 4060 8GB GDDR6</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>16" QHD 165Hz IPS</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>80Wh · hasta 8h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (3 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">9.653 Bs</span>
+                            <span class="old-price">11.600 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('Legion 5 Pro Gen 8', 1399, 'IMG/imagen2')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Lenovo Legion 7i -->
+                <div class="laptop-card" data-category="lenovo" data-price="1899">
+                    <div class="card-img">
+                        <img src="/IMG/Legion 7i Gen 8.png" alt="Legion 7i">
+                    </div>
+                    <span class="badge-card red">Gaming Pro</span>
+                    <h3>Legion 7i Gen 8</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i9-13900HX</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>32GB DDR5 6000MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>2TB SSD NVMe RAID 0</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 4090 16GB GDDR6</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>16" 2.5K 240Hz 500nits</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>99.9Wh · hasta 9h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (4 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">13.127 Bs</span>
+                            <span class="old-price">15.800 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('Legion 7i Gen 8', 1899, 'IMG/imagen3')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Dell Alienware m16 -->
+                <div class="laptop-card" data-category="dell" data-price="2499">
+                    <div class="card-img">
+                        <img src="/IMG/Dell Alienware m16 R2.png" alt="Alienware m16">
+                    </div>
+                    <span class="badge-card red">Gaming Elite</span>
+                    <h3>Dell Alienware m16 R2</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i9-13900HX</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>32GB DDR5 5600MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>1TB SSD NVMe PCIe 4.0</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 4080 12GB GDDR6</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>16" QHD+ 240Hz 3ms</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>90Wh · hasta 6h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (2 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">17.000 Bs</span>
+                            <span class="old-price">19.000 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('Dell Alienware m16 R2', 2499, 'IMG/imagen1')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Dell G15 -->
+                <div class="laptop-card" data-category="dell" data-price="899">
+                    <div class="card-img">
+                        <img src="/IMG/Dell G15 5530.png" alt="Dell G15">
+                    </div>
+                    <span class="badge-card red">Gaming</span>
+                    <h3>Dell G15 5530</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i5-13450HX</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB DDR5 4800MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 3050 6GB GDDR6</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>15.6" FHD 120Hz</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>56Wh · hasta 5h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (8 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">6.100 Bs</span>
+                            <span class="old-price">7.500 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('Dell G15 5530', 899, 'IMG/imagen2')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- HP Omen 16 -->
+                <div class="laptop-card" data-category="hp" data-price="1299">
+                    <div class="card-img">
+                        <img src="/IMG/HP Omen 16-wd0000.png" alt="HP Omen 16">
+                    </div>
+                    <span class="badge-card red">Gaming</span>
+                    <h3>HP Omen 16-wd0000</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i7-13700HX</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB DDR5 4800MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>1TB SSD NVMe PCIe 4.0</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 4060 8GB GDDR6</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>16.1" QHD 165Hz IPS</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>83Wh · hasta 7h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (5 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">8.900 Bs</span>
+                            <span class="old-price">10.300 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('HP Omen 16', 1299, 'IMG/imagen3')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- HP Omen Transcend 14 -->
+                <div class="laptop-card" data-category="hp" data-price="1699">
+                    <div class="card-img">
+                        <img src="/IMG/HP Omen Transcend 14-fb0000.png" alt="HP Omen Transcend 14">
+                    </div>
+                    <span class="badge-card red">Gaming Pro</span>
+                    <h3>HP Omen Transcend 14-fb0000</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i9-13900H</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>32GB DDR5 5600MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>1TB SSD NVMe PCIe 4.0</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 4070 8GB GDDR6</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>14" 2.8K OLED 120Hz</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>71Wh · hasta 8h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (3 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">11.500 Bs</span>
+                            <span class="old-price">13.700 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('HP Omen Transcend 14', 1699, 'IMG/imagen1')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- HP Victus 15 -->
+                <div class="laptop-card" data-category="hp" data-price="699">
+                    <div class="card-img">
+                        <img src="/IMG/HP Victus 15-fb2000.png" alt="HP Victus 15">
+                    </div>
+                    <span class="badge-card red">Gaming Entry</span>
+                    <h3>HP Victus 15-fb2000</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>AMD Ryzen 5 7535HS</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>8GB DDR5 4800MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 2050 4GB</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>15.6" FHD 144Hz</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>52Wh · hasta 6h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (11 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">4.800 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('HP Victus 15', 699, 'IMG/imagen2')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Asus ROG Zephyrus G14 -->
+                <div class="laptop-card" data-category="asus" data-price="1599">
+                    <div class="card-img">
+                        <img src="/IMG/Asus ROG Zephyrus G14 2024.png" alt="ROG Zephyrus G14">
+                    </div>
+                    <span class="badge-card red">Gaming</span>
+                    <h3>Asus ROG Zephyrus G14 2024</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>AMD Ryzen 9 8945HS</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>32GB LPDDR5X 6400MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>1TB SSD NVMe PCIe 4.0</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 4070 8GB GDDR6</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>14" 3K OLED 120Hz</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>73Wh · hasta 10h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (4 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">11.000 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('Asus ROG Zephyrus G14', 1599, 'IMG/imagen3')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Asus ROG Strix Scar 16 -->
+                <div class="laptop-card" data-category="asus" data-price="2899">
+                    <div class="card-img">
+                        <img src="/IMG/Asus ROG Strix Scar 16 2024.png" alt="ROG Strix Scar 16">
+                    </div>
+                    <span class="badge-card red">Gaming Pro</span>
+                    <h3>Asus ROG Strix Scar 16 2024</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i9-14900HX</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>32GB DDR5 5600MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>2TB SSD NVMe RAID 0</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 4090 16GB GDDR6</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>16" Mini LED 240Hz 1100nits</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>90Wh · hasta 7h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Pro</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (2 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">8.700 Bs</span>
+                            <span class="old-price">12.000 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('Asus ROG Strix Scar 16', 2899, 'IMG/imagen1')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Asus TUF Gaming A15 -->
+                <div class="laptop-card" data-category="asus" data-price="799">
+                    <div class="card-img">
+                        <img src="/IMG/Asus TUF Gaming A15 2024.png" alt="TUF Gaming A15">
+                    </div>
+                    <span class="badge-card red">Gaming</span>
+                    <h3>Asus TUF Gaming A15 2024</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>AMD Ryzen 7 7435HS</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB DDR5 4800MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 3050 6GB GDDR6</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>15.6" FHD 144Hz 100% sRGB</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>48Wh · hasta 5h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (10 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">5.400 Bs</span>
+                            <span class="old-price">6.500 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('Asus TUF Gaming A15', 799, 'IMG/imagen2')">Comprar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL COMPRA -->
+    <div class="modal-overlay" id="modal-overlay" onclick="closeModal()"></div>
+    <div class="modal-buy" id="modal-buy">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="">
+            <h3 id="modal-title"></h3>
+            <p class="modal-price" id="modal-price"></p>
+            <div class="modal-form">
+                <input type="text" placeholder="Nombre completo" class="modal-input">
+                <input type="email" placeholder="Correo electrónico" class="modal-input">
+                <input type="tel" placeholder="Teléfono" class="modal-input">
+                <input type="text" placeholder="Dirección de envío" class="modal-input">
+                <select class="modal-input">
+                    <option>Cochabamba</option>
+                    <option>La Paz</option>
+                    <option>Santa Cruz</option>
+                    <option>Oruro</option>
+                    <option>Potosí</option>
+                    <option>Tarija</option>
+                    <option>Sucre</option>
+                    <option>Beni</option>
+                    <option>Pando</option>
+                </select>
+                <button class="modal-btn-confirm" onclick="confirmBuy()">Confirmar Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/JS/script.js"></script>
+</body>
+</html>

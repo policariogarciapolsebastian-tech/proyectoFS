@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asus - CyberNova</title>
+    <link rel="stylesheet" href="/CSS/marcas.css">
+</head>
+<body>
+
+    <!-- Header marca -->
+    <div class="brand-header">
+        <div class="container brand-header-content">
+            <div class="brand-info">
+                <div class="brand-logo asus">ASUS</div>
+                <div>
+                    <h1>Asus</h1>
+                    <p>8 laptops disponibles · Envío gratis en todos los modelos</p>
+                </div>
+            </div>
+            <button class="close-btn" onclick="history.back()">✕</button>
+        </div>
+    </div>
+
+    <!-- Filtros -->
+    <div class="container">
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterLaptops('all', this)">Todos</button>
+            <button class="filter-btn" onclick="filterLaptops('rog', this)">ROG</button>
+            <button class="filter-btn" onclick="filterLaptops('zenbook', this)">ZenBook</button>
+            <button class="filter-btn" onclick="filterLaptops('vivobook', this)">VivoBook</button>
+            <button class="filter-btn" onclick="filterLaptops('tuf', this)">TUF Gaming</button>
+            <button class="filter-btn" onclick="filterLaptops('proart', this)">ProArt</button>
+            <button class="filter-btn" onclick="sortLaptops('asc', this)">Menor precio</button>
+            <button class="filter-btn" onclick="sortLaptops('desc', this)">Mayor precio</button>
+        </div>
+    </div>
+
+    <!-- Catálogo -->
+    <section class="catalog">
+        <div class="container">
+            <div class="catalog-grid" id="catalog-grid">
+
+                <!-- Asus ROG Zephyrus G14 -->
+                <div class="laptop-card" data-category="rog" data-price="1599">
+                    <div class="card-img">
+                        <img src="/IMG/Asus ROG Zephyrus G14 2024.png" alt="Asus ROG Zephyrus G14">
+                    </div>
+                    <span class="badge-card red">Gaming</span>
+                    <h3>Asus ROG Zephyrus G14 2024</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>AMD Ryzen 9 8945HS</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>32GB LPDDR5X 6400MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>1TB SSD NVMe PCIe 4.0</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 4070 8GB GDDR6</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>14" 3K OLED 120Hz 100% DCI-P3</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>73Wh · hasta 10h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>1.50 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (4 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">11.000 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- Asus ZenBook 14 -->
+                <div class="laptop-card" data-category="zenbook" data-price="1099">
+                    <div class="card-img">
+                        <img src="/IMG/Asus ZenBook 14 UX3405.png" alt="Asus ZenBook 14">
+                    </div>
+                    <span class="badge-card purple">Ultrabook</span>
+                    <h3>Asus ZenBook 14 UX3405</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core Ultra 7 155H</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB LPDDR5X 7467MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>1TB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>Intel Arc Graphics</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>14" 3K OLED 120Hz Touch</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>75Wh · hasta 15h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>1.20 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (7 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">7.500 Bs</span>
+                            <span class="old-price">8.900 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- Asus VivoBook 15 -->
+                <div class="laptop-card" data-category="vivobook" data-price="549">
+                    <div class="card-img">
+                        <img src="/IMG/Asus VivoBook 15 X1504.png" alt="Asus VivoBook 15">
+                    </div>
+                    <span class="badge-card blue">Home</span>
+                    <h3>Asus VivoBook 15 X1504</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i3-1215U</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>8GB DDR4 3200MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>256GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>Intel UHD Graphics</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>15.6" FHD 60Hz</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>42Wh · hasta 6h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>1.70 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (18 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">3.700 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- Asus TUF Gaming A15 -->
+                <div class="laptop-card" data-category="tuf" data-price="799">
+                    <div class="card-img">
+                        <img src="/IMG/Asus TUF Gaming A15 2024.png" alt="Asus TUF Gaming A15">
+                    </div>
+                    <span class="badge-card red">Gaming</span>
+                    <h3>Asus TUF Gaming A15 2024</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>AMD Ryzen 7 7435HS</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB DDR5 4800MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 3050 6GB GDDR6</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>15.6" FHD 144Hz 100% sRGB</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>48Wh · hasta 5h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>2.20 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (10 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">5.400 Bs</span>
+                            <span class="old-price">6.500 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- Asus ROG Strix Scar 16 -->
+                <div class="laptop-card" data-category="rog" data-price="2899">
+                    <div class="card-img">
+                        <img src="/IMG/Asus ROG Strix Scar 16 2024.png" alt="Asus ROG Strix Scar 16">
+                    </div>
+                    <span class="badge-card red">Gaming Pro</span>
+                    <h3>Asus ROG Strix Scar 16 2024</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i9-14900HX</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>32GB DDR5 5600MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>2TB SSD NVMe RAID 0</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 4090 16GB GDDR6</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>16" Mini LED 240Hz 1100nits</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>90Wh · hasta 7h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>2.55 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Pro</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (2 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">8.700 Bs</span>
+                            <span class="old-price">12.000 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- Asus ProArt Studiobook 16 -->
+                <div class="laptop-card" data-category="proart" data-price="2199">
+                    <div class="card-img">
+                        <img src="/IMG/Asus ProArt Studiobook 16 OLED.png" alt="Asus ProArt Studiobook 16">
+                    </div>
+                    <span class="badge-card purple">Creator</span>
+                    <h3>Asus ProArt Studiobook 16 OLED</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i9-13980HX</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>64GB DDR5 5600MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>2TB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 4070 8GB GDDR6</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>16" 4K OLED 100% DCI-P3</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>90Wh · hasta 8h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>2.40 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Pro</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (3 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">15.100 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- Asus ZenBook Duo 14 -->
+                <div class="laptop-card" data-category="zenbook" data-price="1699">
+                    <div class="card-img">
+                        <img src="/IMG/Asus ZenBook Duo 14 UX8406.png" alt="Asus ZenBook Duo 14">
+                    </div>
+                    <span class="badge-card purple">Dual Screen</span>
+                    <h3>Asus ZenBook Duo 14 UX8406</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core Ultra 9 185H</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>32GB LPDDR5X 7467MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>1TB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>Intel Arc Graphics</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>14" 3K OLED + 12.7" ScreenPad</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>75Wh · hasta 10h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>1.65 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (5 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">11.600 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- Asus VivoBook Pro 16 -->
+                <div class="laptop-card" data-category="vivobook" data-price="899">
+                    <div class="card-img">
+                        <img src="/IMG/Asus VivoBook Pro 16 K6604.png" alt="Asus VivoBook Pro 16">
+                    </div>
+                    <span class="badge-card blue">Pro</span>
+                    <h3>Asus VivoBook Pro 16 K6604</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i7-13700H</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB DDR5 4800MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 3050 6GB GDDR6</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>16" 3.2K 120Hz 100% DCI-P3</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>70Wh · hasta 8h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>1.90 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (9 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">6.100 Bs</span>
+                            <span class="old-price">7.500 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="/JS/script.js"></script>
+</body>
+</html>

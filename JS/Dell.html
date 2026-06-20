@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dell - CyberNova</title>
+    <link rel="stylesheet" href="/CSS/marcas.css">
+</head>
+<body>
+
+    <!-- Header marca -->
+    <div class="brand-header">
+        <div class="container brand-header-content">
+            <div class="brand-info">
+                <div class="brand-logo dell">DELL</div>
+                <div>
+                    <h1>Dell</h1>
+                    <p>7 laptops disponibles · Envío gratis en todos los modelos</p>
+                </div>
+            </div>
+            <button class="close-btn" onclick="history.back()">✕</button>
+        </div>
+    </div>
+
+    <!-- Filtros -->
+    <div class="container">
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterLaptops('all', this)">Todos</button>
+            <button class="filter-btn" onclick="filterLaptops('xps', this)">XPS</button>
+            <button class="filter-btn" onclick="filterLaptops('alienware', this)">Alienware</button>
+            <button class="filter-btn" onclick="filterLaptops('inspiron', this)">Inspiron</button>
+            <button class="filter-btn" onclick="filterLaptops('latitude', this)">Latitude</button>
+            <button class="filter-btn" onclick="filterLaptops('gseries', this)">G Series</button>
+            <button class="filter-btn" onclick="sortLaptops('asc', this)">Menor precio</button>
+            <button class="filter-btn" onclick="sortLaptops('desc', this)">Mayor precio</button>
+        </div>
+    </div>
+
+    <!-- Catálogo -->
+    <section class="catalog">
+        <div class="container">
+            <div class="catalog-grid" id="catalog-grid">
+
+                <!-- Dell XPS 13 Plus -->
+                <div class="laptop-card" data-category="xps" data-price="1399">
+                    <div class="card-img">
+                        <img src="/IMG/Dell XPS 13 Plus 9320.png" alt="Dell XPS 13 Plus">
+                    </div>
+                    <span class="badge-card purple">Premium</span>
+                    <h3>Dell XPS 13 Plus 9320</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i7-1360P</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB LPDDR5 6000MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>Intel Iris Xe</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>13.4" 3.5K OLED Touch</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>55Wh · hasta 12h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>1.23 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Pro</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (6 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">9.600 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- Dell Alienware m16 -->
+                <div class="laptop-card" data-category="alienware" data-price="2499">
+                    <div class="card-img">
+                        <img src="/IMG/Dell Alienware m16 R2.png" alt="Dell Alienware m16">
+                    </div>
+                    <span class="badge-card red">Gaming Elite</span>
+                    <h3>Dell Alienware m16 R2</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i9-13900HX</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>32GB DDR5 5600MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>1TB SSD NVMe PCIe 4.0</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 4080 12GB GDDR6</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>16" QHD+ 240Hz 3ms</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>90Wh · hasta 6h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>2.82 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (2 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">17.000 Bs</span>
+                            <span class="old-price">19.000 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- Dell Inspiron 15 -->
+                <div class="laptop-card" data-category="inspiron" data-price="579">
+                    <div class="card-img">
+                        <img src="/IMG/Dell Inspiron 15 3535.png" alt="Dell Inspiron 15">
+                    </div>
+                    <span class="badge-card blue">Home</span>
+                    <h3>Dell Inspiron 15 3535</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>AMD Ryzen 5 7530U</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>8GB DDR4 3200MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>256GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>AMD Radeon Graphics</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>15.6" FHD 120Hz</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>41Wh · hasta 7h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>1.65 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (14 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">3.950 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- Dell Latitude 7430 -->
+                <div class="laptop-card" data-category="latitude" data-price="1249">
+                    <div class="card-img">
+                        <img src="/IMG/Dell Latitude 7430.png" alt="Dell Latitude 7430">
+                    </div>
+                    <span class="badge-card blue">Business</span>
+                    <h3>Dell Latitude 7430</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i7-1265U</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB DDR4 3200MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>Intel Iris Xe</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>14" FHD IPS 400nits</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>58Wh · hasta 13h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>1.22 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Pro</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (5 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">8.500 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- Dell G15 5530 -->
+                <div class="laptop-card" data-category="gseries" data-price="899">
+                    <div class="card-img">
+                        <img src="/IMG/Dell G15 5530.png" alt="Dell G15">
+                    </div>
+                    <span class="badge-card red">Gaming</span>
+                    <h3>Dell G15 5530</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i5-13450HX</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB DDR5 4800MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 3050 6GB GDDR6</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>15.6" FHD 120Hz</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>56Wh · hasta 5h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>2.72 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (8 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">6.100 Bs</span>
+                            <span class="old-price">7.500 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- Dell XPS 15 -->
+                <div class="laptop-card" data-category="xps" data-price="1899">
+                    <div class="card-img">
+                        <img src="/IMG/Dell XPS 15 9530.png" alt="Dell XPS 15">
+                    </div>
+                    <span class="badge-card purple">Creator</span>
+                    <h3>Dell XPS 15 9530</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i7-13700H</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>32GB DDR5 4800MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>1TB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 4050 6GB GDDR6</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>15.6" 3.5K OLED Touch</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>86Wh · hasta 11h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>1.86 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Pro</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (4 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">12.500 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- Dell Inspiron 16 Plus -->
+                <div class="laptop-card" data-category="inspiron" data-price="999">
+                    <div class="card-img">
+                        <img src="/IMG/Dell Inspiron 16 Plus 7630.png" alt="Dell Inspiron 16 Plus">
+                    </div>
+                    <span class="badge-card blue">Plus</span>
+                    <h3>Dell Inspiron 16 Plus 7630</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i7-1360P</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB DDR5 4800MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 3050 6GB</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>16" 2.5K 120Hz 100% sRGB</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>86Wh · hasta 9h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>2.06 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (6 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">6.800 Bs</span>
+                            <span class="old-price">8.000 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="/JS/script.js"></script>
+</body>
+</html>

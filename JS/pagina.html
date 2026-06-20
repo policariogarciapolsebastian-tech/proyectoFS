@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBERNOVA</title>
+    <link rel="stylesheet" href="../CSS/pagBody.css">
+    <link rel="stylesheet" href="../CSS/pagofertaLim.css">
+    
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="contenedor nav-contenedor">
+            <a href="#" class="logo">
+                Cyber<span>Nova</span>
+            </a>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#">Laptops ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="LapTrab.html">💼 Laptops de trabajo</a></li>
+                        <li><a href="LapEstudio.html">🎒 Laptops de estudio</a></li>
+                        <li><a href="LapGaming.html">🎮 Laptops gaming</a></li>
+                        <li><a href="LapDiseño.html">✏️ Laptops diseño</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Marcas ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="MLenovo.html">Lenovo</a></li>
+                        <li><a href="HP.html">HP</a></li>
+                        <li><a href="Dell.html">Dell</a></li>
+                        <li><a href="Asus.html">Asus</a></li>
+                        <li><a href="Apple.html">Apple</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" onclick="openOffers(); return false;">Ofertas</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+            <div class="nav-actions"><!--PARTE DE LA BUSQUEDA-->
+                <div class="search-wrapper">
+                    <input type="text" class="search-box" id="live-search" placeholder="Buscar laptop..." onkeyup="searchLaptops()">
+                    <div class="search-results" id="search-results"></div>
+                </div>
+                <button class="cart-btn" onclick="toggleCart()">Carrito (<span id="cart-count">0</span>)<span class="dots">...</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+<!--parte del logo-->
+    <header class="principio">
+        <div class="contenedor principio-contenedor">
+            <div class="principio-contenido">
+                <span class="badge">Nuevos Modelos 2026</span>
+                <h1>La Laptop Perfecta <br>Para <span class="titulo">Cada Persona</span></h1>
+                <p>Gaming, trabajo, estudio o diseño. encuentra el eequipo ideal en CyberNova, envios a todo el pais</p>
+                <div class="principio-buttons">
+                    
+                    <a href="#" class="btn btn-outline"> Comprar Modelos</a>
+                    <a href="https://view.genially.com/6a0b04c957dbf2269536f12d" class="btn btn-outline"> mini juego </a>
+                    <a href="https://www.canva.com/design/DAHIqcsLhzc/NXzbYruGM3yjN7t6kaQc4Q/edit" class="btn btn-canva">Vista Canva</a>
+                </div>
+            </div>
+            <div class="principio-image">
+                <img src="../IMG/Logo.png" alt="logo CyverNova" class="principio-logo">
+        </div>
+    </header>
+    
+    <section class="destacado">
+        <div class="container">
+            <div class="destacado-encabezado">
+                <div>
+                    <h2>laptops destacados</h2>
+                    <p>los modelos mas vendidos de sta semana</p>
+                </div>
+                
+            </div>
+            <div class="cards-grid">
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../IMG/Asus TUF Gaming A15 2024.png" alt="Laptop Gamer" >
+                    </div>
+                    <span class="badge-card blue">Nuevo</span>
+                    <h3>Asus TUF Gaming A15 2024</h3>
+                    <p class="especif">AMD Ryzen 7 7435HS <br>16GB RAM DDR5 <br> 512GB SSD de almacenamiento <br> Windows 11 Home</p>
+                    <div class="reviews">
+                        <span class="stars">★★★★★</span>
+                        <span class="count">(128 reseñas)</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">5.400 Bs</span>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../IMG/HP Omen Transcend 14-fb0000.png" alt="">
+                    </div>
+                    <span class="badge-card red">Oferta</span>
+                    <h3>HP Omen Transcend 14-fb0000</h3>
+                    <p class="especif">Intel Core i9-13900H <br>32GB DDR5 <br> 1TB SSD de almacenamiento <br> Windows 11 Home</p>
+                    <div class="reviews">
+                        <span class="stars">★★★★★</span>
+                        <span class="count">(94 reseñas)</span>
+                    </div>
+                    <div class="card-footer">
+                        <div class="price-box">
+                            <span class="price">9.000 Bs</span>
+                            <span class="old-price">$1,199</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../IMG/Legion 5 Pro Gen 8.png" alt="">
+                    </div>
+                    <span class="badge-card green">Mas Vendida</span>
+                    <h3> Legion 5 Pro Gen 8</h3>
+                    <p class="especif">AMD Ryzen 7 7745HX <br> 32GB DDR5 <br>1TB SSD de almacenamiento <br> Windows 11 Home</p>
+                    <div class="reviews">
+                        <span class="stars">★★★★★</span>
+                        <span class="count">(216 reseñas)</span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">9.653 Bs</span>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Oferta Limitada + Beneficios -->
+<section class="promo-section">
+    <div class="container">
+        <!--  oferta -->
+        <div class="offer-banner">
+            <div class="offer-content">
+                <span class="offer-label">OFERTA LIMITADA</span>
+                <h2>Hasta 19% de descuento en laptops gaming</h2>
+                <p>Solo hasta agotar stock. No pierdas esta oportunidad.</p>
+                <a href="#" onclick="openOffers(); return false;" class="btn-offer">Ver ofertas</a>
+            </div>
+            <div class="countdown">
+                <div class="count-box">
+                    <span class="count-num" id="hours">08</span>
+                    <span class="count-label">Horas</span>
+                </div>
+                <div class="count-box">
+                    <span class="count-num" id="minutes">32</span>
+                    <span class="count-label">Min</span>
+                </div>
+                <div class="count-box">
+                    <span class="count-num" id="seconds">04</span>
+                    <span class="count-label">Seg</span>
+                </div>
+            </div>
+
+        <!-- Beneficios -->
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">🚚</div>
+                <div class="benefit-info">
+                    <h4>Envío gratis</h4>
+                    <p>En compras mayores a 500</p>
+                </div>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon blue">✓</div>
+                <div class="benefit-info">
+                    <h4>Garantía 2 años</h4>
+                    <p>En todos los equipos</p>
+                </div>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon blue">🔒</div>
+                <div class="benefit-info">
+                    <h4>Pago 100% seguro</h4>
+                    <p>SSL · Visa · MasterCard</p>
+                </div>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon blue">💻</div>
+                <div class="benefit-info">
+                    <h4>Soporte 24/7</h4>
+                    <p>Chat, teléfono y WhatsApp</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonios -->
+<section class="testimonials">
+    <div class="container">
+        <div class="testimonials-header">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <p>Más de 2,000 clientes satisfechos en Bolivia</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"Compré la ProBook Ultra X1 hace 3 meses y es increíble. El equipo llegó en perfecto estado y el servicio post-venta fue excelente. Totalmente recomendado."</p>
+                <div class="author">
+                    <div class="avatar blue">CM</div>
+                    <div class="author-info">
+                        <strong>Carlos Mamani</strong>
+                        <span>Desarrollador · Cochabamba</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"Los precios son los mejores que encontré en todo Bolivia. Me ayudaron a elegir el modelo correcto para mi trabajo de diseño gráfico. Super atento el equipo."</p>
+                <div class="author">
+                    <div class="avatar green">LP</div>
+                    <div class="author-info">
+                        <strong>Lucía Pardo</strong>
+                        <span>Diseñadora · La Paz</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"La GamerEdge es una bestia para gaming. Corre todo al máximo. El envío fue rápido y llegó bien empacada. Volvería a comprar sin dudarlo."</p>
+                <div class="author">
+                    <div class="avatar orange">AR</div>
+                    <div class="author-info">
+                        <strong>Andrés Rojas</strong>
+                        <span>Gamer · Santa Cruz</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">Cyber<span>Nova</span></a>
+                <p>Tu tienda de confianza para laptops en Bolivia. Los mejores precios, garantía real y soporte humano.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Productos</h4>
+                <ul>
+                    <li><a href="LapGaming.html">Laptops gaming</a></li>
+                    <li><a href="LapTrab.html">Laptops trabajo</a></li>
+                    <li><a href="LapEstudio.html">Laptops estudio</a></li>
+                    <li><a href="#" onclick="openOffers(); return false;">Ofertas</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Empresa</h4>
+                <ul>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="https://wa.me/5916505433">Trabaja con nosotros</a></li>
+                    <li><a href="#">Prensa</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Soporte</h4>
+                <ul>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="https://wa.me/5916505433">WhatsApp</a></li>
+                    <li><a href="#">Garantías</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 CyberNova · Cochabamba, Bolivia · Todos los derechos reservados</p>
+            <div class="footer-legal">
+                <a href="#">Privacidad</a>
+                <a href="#">Términos de uso</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!--PARA LA PARTE SUPERIOR OFERTAS-->
+    <!-- MODAL OFERTAS -->
+<div class="modal-overlay offers" id="offers-overlay" onclick="closeOffers()"></div>
+<div class="modal-offers" id="modal-offers">
+    <button class="modal-close" onclick="closeOffers()">✕</button>
+    <div class="offers-header">
+        <h2>🔥 Ofertas Especiales</h2>
+        <p>Laptops con descuento por tiempo limitado</p>
+    </div>
+    
+    <div class="offers-grid" id="offers-grid">
+        
+        <!-- Oferta 1: Legion 5 Pro -->
+        <div class="offer-card">
+            <div class="offer-badge">-18%</div>
+            <div class="offer-img">
+                <img src="../IMG/Legion 5 Pro Gen 8.png" alt="Legion 5 Pro">
+            </div>
+            <h4>Legion 5 Pro Gen 8</h4>
+            <div class="offer-specs">
+                <span>AMD Ryzen 7 7745HX</span>
+                <span>32GB DDR5 · RTX 4060</span>
+                <span>16" QHD 165Hz</span>
+            </div>
+            <div class="offer-price-box">
+                <span class="offer-old">11.600 Bs</span>
+                <span class="offer-new">9.653 Bs</span>
+            </div>
+            <button class="btn-buy-offer" onclick="openModal('Legion 5 Pro Gen 8', 1399, 'IMG/imagen2'); closeOffers();">Comprar</button>
+        </div>
+
+        <!-- Oferta 2: HP Omen 16 -->
+        <div class="offer-card">
+            <div class="offer-badge">-13%</div>
+            <div class="offer-img">
+                <img src="../IMG/HP Omen 16-wd0000.png" alt="HP Omen 16">
+            </div>
+            <h4>HP Omen 16-wd0000</h4>
+            <div class="offer-specs">
+                <span>Intel Core i7-13700HX</span>
+                <span>16GB DDR5 · RTX 4060</span>
+                <span>16.1" QHD 165Hz</span>
+            </div>
+            <div class="offer-price-box">
+                <span class="offer-old">10.300 Bs</span>
+                <span class="offer-new">8.900 Bs</span>
+            </div>
+            <button class="btn-buy-offer" onclick="openModal('HP Omen 16', 1299, 'IMG/imagen3'); closeOffers();">Comprar</button>
+        </div>
+
+        <!-- Oferta 3: Pavilion x360 -->
+        <div class="offer-card">
+            <div class="offer-badge">-19%</div>
+            <div class="offer-img">
+                <img src="../IMG/HP Pavilion x360 14-ek1000.png" alt="HP Pavilion x360">
+            </div>
+            <h4>HP Pavilion x360 14</h4>
+            <div class="offer-specs">
+                <span>Intel Core i5-1335U</span>
+                <span>8GB DDR4 · Touch</span>
+                <span>14" FHD IPS 2-en-1</span>
+            </div>
+            <div class="offer-price-box">
+                <span class="offer-old">6.100 Bs</span>
+                <span class="offer-new">4.450 Bs</span>
+            </div>
+            <button class="btn-buy-offer" onclick="openModal('HP Pavilion x360 14', 649, 'IMG/imagen2'); closeOffers();">Comprar</button>
+        </div>
+
+        <!-- Oferta 4: Dell G15 -->
+        <div class="offer-card">
+            <div class="offer-badge">-18%</div>
+            <div class="offer-img">
+                <img src="../IMG/Dell G15 5530.png" alt="Dell G15">
+            </div>
+            <h4>Dell G15 5530</h4>
+            <div class="offer-specs">
+                <span>Intel Core i5-13450HX</span>
+                <span>16GB DDR5 · RTX 3050</span>
+                <span>15.6" FHD 120Hz</span>
+            </div>
+            <div class="offer-price-box">
+                <span class="offer-old">7.500 Bs</span>
+                <span class="offer-new">6.100 Bs</span>
+            </div>
+            <button class="btn-buy-offer" onclick="openModal('Dell G15 5530', 899, 'IMG/imagen2'); closeOffers();">Comprar</button>
+        </div>
+
+        <!-- Oferta 5: Asus ZenBook 14 -->
+        <div class="offer-card">
+            <div class="offer-badge">-15%</div>
+            <div class="offer-img">
+                <img src="../IMG/Asus ZenBook 14 UX3405.png" alt="Asus ZenBook 14">
+            </div>
+            <h4>Asus ZenBook 14 UX3405</h4>
+            <div class="offer-specs">
+                <span>Intel Core Ultra 7</span>
+                <span>16GB LPDDR5X · OLED</span>
+                <span>14" 3K 120Hz Touch</span>
+            </div>
+            <div class="offer-price-box">
+                <span class="offer-old">8.900 Bs</span>
+                <span class="offer-new">7.500 Bs</span>
+            </div>
+            <button class="btn-buy-offer" onclick="openModal('Asus ZenBook 14', 1099, 'IMG/imagen2'); closeOffers();">Comprar</button>
+        </div>
+
+        <!-- Oferta 6: Inspiron 16 Plus -->
+        <div class="offer-card">
+            <div class="offer-badge">-17%</div>
+            <div class="offer-img">
+                <img src="../IMG/Dell Inspiron 16 Plus 7630.png" alt="Dell Inspiron 16 Plus">
+            </div>
+            <h4>Dell Inspiron 16 Plus 7630</h4>
+            <div class="offer-specs">
+                <span>Intel Core i7-1360P</span>
+                <span>16GB DDR5 · RTX 3050</span>
+                <span>16" 2.5K 120Hz</span>
+            </div>
+            <div class="offer-price-box">
+                <span class="offer-old">8.000 Bs</span>
+                <span class="offer-new">6.800 Bs</span>
+            </div>
+            <button class="btn-buy-offer" onclick="openModal('Dell Inspiron 16 Plus', 999, 'IMG/imagen1'); closeOffers();">Comprar</button>
+        </div>
+
+        <!-- Oferta 7: IdeaPad Gaming 3 -->
+        <div class="offer-card">
+            <div class="offer-badge">-16%</div>
+            <div class="offer-img">
+                <img src="../IMG/IdeaPad Gaming 3 Gen 7.png" alt="IdeaPad Gaming 3">
+            </div>
+            <h4>IdeaPad Gaming 3 Gen 7</h4>
+            <div class="offer-specs">
+                <span>AMD Ryzen 5 6600H</span>
+                <span>16GB DDR5 · RTX 3050</span>
+                <span>15.6" FHD 120Hz</span>
+            </div>
+            <div class="offer-price-box">
+                <span class="offer-old">6.500 Bs</span>
+                <span class="offer-new">5.519 Bs</span>
+            </div>
+            <button class="btn-buy-offer" onclick="openModal('IdeaPad Gaming 3 Gen 7', 799, 'IMG/imagen3'); closeOffers();">Comprar</button>
+        </div>
+
+        <!-- Oferta 8: TUF Gaming A15 -->
+        <div class="offer-card">
+            <div class="offer-badge">-16%</div>
+            <div class="offer-img">
+                <img src="../IMG/Asus TUF Gaming A15 2024.png" alt="TUF Gaming A15">
+            </div>
+            <h4>Asus TUF Gaming A15 2024</h4>
+            <div class="offer-specs">
+                <span>AMD Ryzen 7 7435HS</span>
+                <span>16GB DDR5 · RTX 3050</span>
+                <span>15.6" FHD 144Hz</span>
+            </div>
+            <div class="offer-price-box">
+                <span class="offer-old">6.500 Bs</span>
+                <span class="offer-new">5.400 Bs</span>
+            </div>
+            <button class="btn-buy-offer" onclick="openModal('Asus TUF Gaming A15', 799, 'IMG/imagen2'); closeOffers();">Comprar</button>
+        </div>
+
+        <!-- Oferta 9: VivoBook Pro 16 -->
+        <div class="offer-card">
+            <div class="offer-badge">-18%</div>
+            <div class="offer-img">
+                <img src="../IMG/Asus VivoBook Pro 16 K6604.png" alt="VivoBook Pro 16">
+            </div>
+            <h4>Asus VivoBook Pro 16</h4>
+            <div class="offer-specs">
+                <span>Intel Core i7-13700H</span>
+                <span>16GB DDR5 · RTX 3050</span>
+                <span>16" 3.2K 120Hz</span>
+            </div>
+            <div class="offer-price-box">
+                <span class="offer-old">7.500 Bs</span>
+                <span class="offer-new">6.100 Bs</span>
+            </div>
+            <button class="btn-buy-offer" onclick="openModal('Asus VivoBook Pro 16', 899, 'IMG/imagen2'); closeOffers();">Comprar</button>
+        </div>
+
+        <!-- Oferta 10: HP Omen Transcend 14 -->
+        <div class="offer-card">
+            <div class="offer-badge">-15%</div>
+            <div class="offer-img">
+                <img src="../IMG/HP Omen Transcend 14-fb0000.png" alt="HP Omen Transcend 14">
+            </div>
+            <h4>HP Omen Transcend 14</h4>
+            <div class="offer-specs">
+                <span>Intel Core i9-13900H</span>
+                <span>32GB DDR5 · RTX 4070</span>
+                <span>14" 2.8K OLED 120Hz</span>
+            </div>
+            <div class="offer-price-box">
+                <span class="offer-old">13.700 Bs</span>
+                <span class="offer-new">11.500 Bs</span>
+            </div>
+            <button class="btn-buy-offer" onclick="openModal('HP Omen Transcend 14', 1699, 'IMG/imagen1'); closeOffers();">Comprar</button>
+        </div>
+
+    </div>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

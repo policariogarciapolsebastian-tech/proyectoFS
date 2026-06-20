@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenovo - CyberNova</title>
+    <link rel="stylesheet" href="/CSS/marcas.css">
+    
+</head>
+<body>
+
+    <!-- Header marca -->
+    <div class="brand-header">
+        <div class="container brand-header-content">
+            <div class="brand-info">
+                <div class="brand-logo red">LENOVO</div>
+                <div>
+                    <h1>Lenovo</h1>
+                    <p>8 laptops disponibles · Envío gratis en todos los modelos</p>
+                </div>
+            </div>
+            <button class="close-btn" onclick="history.back()">✕</button>
+        </div>
+    </div>
+
+    <!-- Filtros -->
+    <div class="container">
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterLaptops('all', this)">Todos</button>
+            <button class="filter-btn" onclick="filterLaptops('thinkpad', this)">ThinkPad</button>
+            <button class="filter-btn" onclick="filterLaptops('ideapad', this)">IdeaPad</button>
+            <button class="filter-btn" onclick="filterLaptops('legion', this)">Legion (Gaming)</button>
+            <button class="filter-btn" onclick="filterLaptops('yoga', this)">Yoga</button>
+            <button class="filter-btn" onclick="sortLaptops('asc', this)">Menor precio</button>
+            <button class="filter-btn" onclick="sortLaptops('desc', this)">Mayor precio</button>
+        </div>
+    </div>
+
+    <!-- Catálogo -->
+    <section class="catalog">
+        <div class="container">
+            <div class="catalog-grid" id="catalog-grid">
+
+                <!-- ThinkPad X1 Carbon -->
+                <div class="laptop-card" data-category="thinkpad" data-price="1549">
+                    <div class="card-img">
+                        <img src="/IMG/ThinkPad_X1_Carbon_Gen.png" alt="ThinkPad X1 Carbon">
+                    </div>
+                    <span class="badge-card blue">Business</span>
+                    <h3>ThinkPad X1 Carbon Gen 11</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i7-1365U</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB LPDDR5</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>14" 2.8K OLED 120Hz</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>57Wh · hasta 15h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>1.12 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Pro</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (5 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">10.687 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- Legion 5 Pro -->
+                <div class="laptop-card" data-category="legion" data-price="1399">
+                    <div class="card-img">
+                        <img src="/IMG/Legion 5 Pro Gen 8.png" alt="Legion 5 Pro">
+                    </div>
+                    <span class="badge-card red">Gaming</span>
+                    <h3>Legion 5 Pro Gen 8</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>AMD Ryzen 7 7745HX</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>32GB DDR5 4800MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>1TB SSD NVMe PCIe 4.0</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 4070 8GB GDDR6</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>16" QHD+ 165Hz IPS</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>80Wh · hasta 8h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (3 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">9.653 Bs</span>
+                            <span class="old-price">11.600 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- IdeaPad Slim 5 -->
+                <div class="laptop-card" data-category="ideapad" data-price="649">
+                    <div class="card-img">
+                        <img src="/IMG/IdeaPad Slim 5 Gen 8.png" alt="IdeaPad Slim 5">
+                    </div>
+                    <span class="badge-card green">Estudio</span>
+                    <h3>IdeaPad Slim 5 Gen 8</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>AMD Ryzen 5 7530U</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>8GB DDR4 3200MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>256GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>15.6" FHD IPS Anti-glare</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>56Wh · hasta 12h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>1.63 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (12 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">4.487 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- Yoga 7 -->
+                <div class="laptop-card" data-category="yoga" data-price="1199">
+                    <div class="card-img">
+                        <img src="/IMG/Yoga 7 Gen 8.png" alt="Yoga 7">
+                    </div>
+                    <span class="badge-card purple">2 en 1</span>
+                    <h3>Yoga 7 Gen 8</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i5-1335U</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB LPDDR5</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>14" 2.8K OLED Touch</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>71Wh · hasta 14h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>1.45 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (8 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">8.279 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- ThinkPad E14 -->
+                <div class="laptop-card" data-category="thinkpad" data-price="899">
+                    <div class="card-img">
+                        <img src="/IMG/ThinkPad E14 Gen 5.png" alt="ThinkPad E14">
+                    </div>
+                    <span class="badge-card blue">Business</span>
+                    <h3>ThinkPad E14 Gen 5</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>AMD Ryzen 5 7530U</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB DDR4</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>14" FHD IPS</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>57Wh · hasta 12h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>1.64 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Pro</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (7 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">6.203 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- IdeaPad Gaming 3 -->
+                <div class="laptop-card" data-category="ideapad" data-price="799">
+                    <div class="card-img">
+                        <img src="/IMG/IdeaPad Gaming 3 Gen 7.png" alt="IdeaPad Gaming 3">
+                    </div>
+                    <span class="badge-card red">Gaming</span>
+                    <h3>IdeaPad Gaming 3 Gen 7</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>AMD Ryzen 5 6600H</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB DDR5</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 3050 4GB</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>15.6" FHD 120Hz</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>60Wh · hasta 6h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (4 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">5.519 Bs</span>
+                            <span class="old-price">6.500 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+                <!-- ThinkPad P1 Gen 6 (Workstation) -->
+                <div class="laptop-card" data-category="thinkpad" data-price="2249">
+                    <div class="card-img">
+                        <img src="/IMG/ThinkPad P1 Gen 6.png" alt="ThinkPad P1 Gen 6">
+                    </div>
+                    <span class="badge-card blue">Workstation</span>
+                    <h3>ThinkPad P1 Gen 6</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i9-13950HX</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>32GB DDR5 5600MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>1TB SSD NVMe PCIe 4.0</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 4080 12GB GDDR6</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>16" 4K OLED Touch 100% DCI-P3</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>90Wh · hasta 10h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>1.78 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Pro</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (2 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">15.527 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+
+                <!-- Legion 7i Gen 8 (Gaming flagship) -->
+                <div class="laptop-card" data-category="legion" data-price="1899">
+                    <div class="card-img">
+                        <img src="/IMG/Legion 7i Gen 8.png" alt="Legion 7i Gen 8">
+                    </div>
+                    <span class="badge-card red">Gaming Pro</span>
+                    <h3>Legion 7i Gen 8</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i9-13900HX</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>32GB DDR5 6000MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>2TB SSD NVMe RAID 0</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 4090 16GB GDDR6</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>16" 2.5K 240Hz IPS 500nits</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>99.9Wh · hasta 9h</strong></div>
+                        <div class="spec-row"><span>Peso</span><strong>2.5 kg</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (4 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">13.127 Bs</span>
+                            <span class="old-price">15.800 Bs</span>
+                        </div>
+                        <button class="btn-add">+ Agregar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/JS/script.js"></script>
+</body>
+</html>

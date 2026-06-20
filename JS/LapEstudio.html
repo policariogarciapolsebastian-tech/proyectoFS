@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptops de Estudio - CyberNova</title>
+    <link rel="stylesheet" href="/CSS/laptops.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="brand-header">
+        <div class="container brand-header-content">
+            <div class="brand-info">
+                <div class="brand-logo study">🎓</div>
+                <div>
+                    <h1>Laptops de Estudio</h1>
+                    <p>8 laptops disponibles · Rendimiento académico para tu educación</p>
+                </div>
+            </div>
+            <button class="close-btn" onclick="history.back()">✕</button>
+        </div>
+    </div>
+
+    <!-- Filtros -->
+    <div class="container">
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterLaptops('all', this)">Todos</button>
+            <button class="filter-btn" onclick="filterLaptops('lenovo', this)">Lenovo</button>
+            <button class="filter-btn" onclick="filterLaptops('dell', this)">Dell</button>
+            <button class="filter-btn" onclick="filterLaptops('hp', this)">HP</button>
+            <button class="filter-btn" onclick="filterLaptops('asus', this)">Asus</button>
+            <button class="filter-btn" onclick="filterLaptops('apple', this)">Apple</button>
+            <button class="filter-btn" onclick="sortLaptops('asc', this)">Menor precio</button>
+            <button class="filter-btn" onclick="sortLaptops('desc', this)">Mayor precio</button>
+        </div>
+    </div>
+
+    <!-- Catálogo -->
+    <section class="catalog">
+        <div class="container">
+            <div class="catalog-grid" id="catalog-grid">
+
+                <!-- Lenovo IdeaPad Slim 5 -->
+                <div class="laptop-card" data-category="lenovo" data-price="649">
+                    <div class="card-img">
+                        <img src="/IMG/IdeaPad Slim 5 Gen 8.png" alt="IdeaPad Slim 5">
+                    </div>
+                    <span class="badge-card green">Estudio</span>
+                    <h3>IdeaPad Slim 5 Gen 8</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>AMD Ryzen 5 7530U</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>8GB DDR4 3200MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>256GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>15.6" FHD IPS Anti-glare</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>56Wh · hasta 12h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (12 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">4.487 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('IdeaPad Slim 5 Gen 8', 649, 'IMG/imagen3')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Dell Inspiron 15 -->
+                <div class="laptop-card" data-category="dell" data-price="579">
+                    <div class="card-img">
+                        <img src="/IMG/Dell Inspiron 15 3535.png" alt="Dell Inspiron 15">
+                    </div>
+                    <span class="badge-card blue">Home</span>
+                    <h3>Dell Inspiron 15 3535</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>AMD Ryzen 5 7530U</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>8GB DDR4 3200MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>256GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>15.6" FHD 120Hz</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>41Wh · hasta 7h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (14 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">3.950 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('Dell Inspiron 15 3535', 579, 'IMG/imagen3')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- HP Pavilion x360 -->
+                <div class="laptop-card" data-category="hp" data-price="649">
+                    <div class="card-img">
+                        <img src="/IMG/HP Pavilion x360 14-ek1000.png" alt="HP Pavilion x360">
+                    </div>
+                    <span class="badge-card blue">2 en 1</span>
+                    <h3>HP Pavilion x360 14-ek1000</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i5-1335U</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>8GB DDR4 3200MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>256GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>14" FHD Touch IPS</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>43Wh · hasta 9h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (7 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">4.450 Bs</span>
+                            <span class="old-price">5.400 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('HP Pavilion x360 14', 649, 'IMG/imagen2')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Asus VivoBook 15 -->
+                <div class="laptop-card" data-category="asus" data-price="549">
+                    <div class="card-img">
+                        <img src="/IMG/Asus VivoBook 15 X1504.png" alt="Asus VivoBook 15">
+                    </div>
+                    <span class="badge-card blue">Home</span>
+                    <h3>Asus VivoBook 15 X1504</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i3-1215U</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>8GB DDR4 3200MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>256GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>15.6" FHD 60Hz</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>42Wh · hasta 6h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (18 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">3.700 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('Asus VivoBook 15 X1504', 549, 'IMG/imagen3')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- MacBook Air 13" M3 -->
+                <div class="laptop-card" data-category="apple" data-price="1099">
+                    <div class="card-img">
+                        <img src="/IMG/MacBook Air 13 M3.png" alt="MacBook Air 13">
+                    </div>
+                    <span class="badge-card blue">Ultraligera</span>
+                    <h3>MacBook Air 13" M3</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Apple M3 8-core CPU</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>8GB Unified Memory</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>256GB SSD</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>13.6" Liquid Retina</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>52.6Wh · hasta 18h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>macOS Sonoma</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (12 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">7.500 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('MacBook Air 13 M3', 1099, 'IMG/imagen1')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Lenovo IdeaPad Gaming 3 -->
+                <div class="laptop-card" data-category="lenovo" data-price="799">
+                    <div class="card-img">
+                        <img src="/IMG/IdeaPad Gaming 3 Gen 7.png" alt="IdeaPad Gaming 3">
+                    </div>
+                    <span class="badge-card red">Gaming Entry</span>
+                    <h3>IdeaPad Gaming 3 Gen 7</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>AMD Ryzen 5 6600H</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB DDR5</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 3050 4GB</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>15.6" FHD 120Hz</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>60Wh · hasta 6h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (4 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">5.499 Bs</span>
+                            <span class="old-price">6.500 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('IdeaPad Gaming 3 Gen 7', 799, 'IMG/imagen3')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Dell Inspiron 16 Plus -->
+                <div class="laptop-card" data-category="dell" data-price="999">
+                    <div class="card-img">
+                        <img src="/IMG/Dell Inspiron 16 Plus 7630.png" alt="Dell Inspiron 16 Plus">
+                    </div>
+                    <span class="badge-card blue">Plus</span>
+                    <h3>Dell Inspiron 16 Plus 7630</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i7-1360P</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB DDR5 4800MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 3050 6GB</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>16" 2.5K 120Hz</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>86Wh · hasta 9h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (6 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">6.800 Bs</span>
+                            <span class="old-price">8.000 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('Dell Inspiron 16 Plus', 999, 'IMG/imagen1')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Asus VivoBook Pro 16 -->
+                <div class="laptop-card" data-category="asus" data-price="899">
+                    <div class="card-img">
+                        <img src="/IMG/Asus VivoBook Pro 16 K6604.png" alt="Asus VivoBook Pro 16">
+                    </div>
+                    <span class="badge-card blue">Pro</span>
+                    <h3>Asus VivoBook Pro 16 K6604</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i7-13700H</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB DDR5 4800MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 3050 6GB</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>16" 3.2K 120Hz</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>70Wh · hasta 8h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (9 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">6.100 Bs</span>
+                            <span class="old-price">7.500 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('Asus VivoBook Pro 16', 899, 'IMG/imagen2')">Comprar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL COMPRA -->
+    <div class="modal-overlay" id="modal-overlay" onclick="closeModal()"></div>
+    <div class="modal-buy" id="modal-buy">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="">
+            <h3 id="modal-title"></h3>
+            <p class="modal-price" id="modal-price"></p>
+            <div class="modal-form">
+                <input type="text" placeholder="Nombre completo" class="modal-input">
+                <input type="email" placeholder="Correo electrónico" class="modal-input">
+                <input type="tel" placeholder="Teléfono" class="modal-input">
+                <input type="text" placeholder="Dirección de envío" class="modal-input">
+                <select class="modal-input">
+                    <option>Cochabamba</option>
+                    <option>La Paz</option>
+                    <option>Santa Cruz</option>
+                    <option>Oruro</option>
+                    <option>Potosí</option>
+                    <option>Tarija</option>
+                    <option>Sucre</option>
+                    <option>Beni</option>
+                    <option>Pando</option>
+                </select>
+                <button class="modal-btn-confirm" onclick="confirmBuy()">Confirmar Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/JS/script.js"></script>
+</body>
+</html>

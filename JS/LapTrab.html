@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptops de Trabajo - LapTech</title>
+    <link rel="stylesheet" href="/CSS/laptops.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="brand-header">
+        <div class="container brand-header-content">
+            <div class="brand-info">
+                <div class="brand-logo work">💼</div>
+                <div>
+                    <h1>Laptops de Trabajo</h1>
+                    <p>13 laptops disponibles · Rendimiento profesional para tu día a día</p>
+                </div>
+            </div>
+            <button class="close-btn" onclick="history.back()">✕</button>
+        </div>
+    </div>
+
+    <!-- Filtros -->
+    <div class="container">
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterLaptops('all', this)">Todos</button>
+            <button class="filter-btn" onclick="filterLaptops('lenovo', this)">Lenovo</button>
+            <button class="filter-btn" onclick="filterLaptops('dell', this)">Dell</button>
+            <button class="filter-btn" onclick="filterLaptops('hp', this)">HP</button>
+            <button class="filter-btn" onclick="filterLaptops('asus', this)">Asus</button>
+            <button class="filter-btn" onclick="filterLaptops('apple', this)">Apple</button>
+        </div>
+    </div>
+
+    <!-- Catálogo -->
+    <section class="catalog">
+        <div class="container">
+            <div class="catalog-grid" id="catalog-grid">
+
+                <!-- Lenovo ThinkPad X1 Carbon -->
+                <div class="laptop-card" data-category="lenovo" data-price="1549">
+                    <div class="card-img">
+                        <img src="/IMG/ThinkPad_X1_Carbon_Gen.png" alt="ThinkPad X1 Carbon">
+                    </div>
+                    <span class="badge-card blue">Business</span>
+                    <h3>ThinkPad X1 Carbon Gen 11</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i7-1365U</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB LPDDR5</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>14" 2.8K OLED 120Hz</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>57Wh · hasta 15h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Pro</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (5 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">10.687 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('ThinkPad X1 Carbon Gen 11', 1549, 'IMG/imagen1')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Lenovo ThinkPad E14 -->
+                <div class="laptop-card" data-category="lenovo" data-price="899">
+                    <div class="card-img">
+                        <img src="/IMG/ThinkPad E14 Gen 5.png" alt="ThinkPad E14">
+                    </div>
+                    <span class="badge-card blue">Business</span>
+                    <h3>ThinkPad E14 Gen 5</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>AMD Ryzen 5 7530U</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB DDR4</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>14" FHD IPS</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>57Wh · hasta 12h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Pro</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (7 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">6.203 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('ThinkPad E14 Gen 5', 899, 'IMG/imagen2')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Dell Latitude 7430 -->
+                <div class="laptop-card" data-category="dell" data-price="1249">
+                    <div class="card-img">
+                        <img src="/IMG/Dell Latitude 7430.png" alt="Dell Latitude 7430">
+                    </div>
+                    <span class="badge-card blue">Business</span>
+                    <h3>Dell Latitude 7430</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i7-1265U</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB DDR4 3200MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>14" FHD IPS 400nits</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>58Wh · hasta 13h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Pro</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (5 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">8.500 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('Dell Latitude 7430', 1249, 'IMG/imagen3')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Dell XPS 13 Plus -->
+                <div class="laptop-card" data-category="dell" data-price="1399">
+                    <div class="card-img">
+                        <img src="/IMG/Dell XPS 13 Plus 9320.png" alt="Dell XPS 13 Plus">
+                    </div>
+                    <span class="badge-card purple">Premium</span>
+                    <h3>Dell XPS 13 Plus 9320</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i7-1360P</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB LPDDR5 6000MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>13.4" 3.5K OLED Touch</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>55Wh · hasta 12h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Pro</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (6 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">9.600 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('Dell XPS 13 Plus', 1399, 'IMG/imagen1')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Dell XPS 15 -->
+                <div class="laptop-card" data-category="dell" data-price="1899">
+                    <div class="card-img">
+                        <img src="/IMG/Dell XPS 15 9530.png" alt="Dell XPS 15">
+                    </div>
+                    <span class="badge-card purple">Creator</span>
+                    <h3>Dell XPS 15 9530</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i7-13700H</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>32GB DDR5 4800MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>1TB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>15.6" 3.5K OLED Touch</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>86Wh · hasta 11h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Pro</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (4 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">12.500 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('Dell XPS 15', 1899, 'IMG/imagen2')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- HP Pavilion 15 -->
+                <div class="laptop-card" data-category="hp" data-price="749">
+                    <div class="card-img">
+                        <img src="/IMG/HP Pavilion 15-eg3000.png" alt="HP Pavilion 15">
+                    </div>
+                    <span class="badge-card blue">Home</span>
+                    <h3>HP Pavilion 15-eg3000</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i5-1335U</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB DDR4 3200MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>15.6" FHD IPS 144Hz</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>41Wh · hasta 8h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (9 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">5.100 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('HP Pavilion 15', 749, 'IMG/imagen3')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- HP Envy 17 -->
+                <div class="laptop-card" data-category="hp" data-price="1199">
+                    <div class="card-img">
+                        <img src="/IMG/HP Envy 17-da0000.png" alt="HP Envy 17">
+                    </div>
+                    <span class="badge-card purple">Premium</span>
+                    <h3>HP Envy 17-da0000</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i7-1355U</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB DDR5 5200MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>1TB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>17.3" FHD Touch IPS</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>55Wh · hasta 10h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (4 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">8.200 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('HP Envy 17', 1199, 'IMG/imagen1')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Asus ZenBook 14 -->
+                <div class="laptop-card" data-category="asus" data-price="1099">
+                    <div class="card-img">
+                        <img src="/IMG/Asus ZenBook 14 UX3405.png" alt="Asus ZenBook 14">
+                    </div>
+                    <span class="badge-card purple">Ultrabook</span>
+                    <h3>Asus ZenBook 14 UX3405</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core Ultra 7 155H</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB LPDDR5X 7467MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>1TB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>14" 3K OLED 120Hz Touch</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>75Wh · hasta 15h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (7 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">7.500 Bs</span>
+                            <span class="old-price">8.900 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('Asus ZenBook 14', 1099, 'IMG/imagen2')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Asus ZenBook Duo 14 -->
+                <div class="laptop-card" data-category="asus" data-price="1699">
+                    <div class="card-img">
+                        <img src="/IMG/Asus ZenBook Duo 14 UX8406.png" alt="Asus ZenBook Duo 14">
+                    </div>
+                    <span class="badge-card purple">Dual Screen</span>
+                    <h3>Asus ZenBook Duo 14 UX8406</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core Ultra 9 185H</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>32GB LPDDR5X 7467MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>1TB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>14" 3K OLED + 12.7" ScreenPad</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>75Wh · hasta 10h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (5 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">11.600 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('Asus ZenBook Duo 14', 1699, 'IMG/imagen3')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- MacBook Air 13" M3 -->
+                <div class="laptop-card" data-category="apple" data-price="1099">
+                    <div class="card-img">
+                        <img src="/IMG/MacBook Air 13 M3.png" alt="MacBook Air 13">
+                    </div>
+                    <span class="badge-card blue">Ultraligera</span>
+                    <h3>MacBook Air 13" M3</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Apple M3 8-core CPU</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>8GB Unified Memory</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>256GB SSD</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>13.6" Liquid Retina 2560×1664</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>52.6Wh · hasta 18h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>macOS Sonoma</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (12 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">7.500 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('MacBook Air 13 M3', 1099, 'IMG/imagen1')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- MacBook Air 15" M3 -->
+                <div class="laptop-card" data-category="apple" data-price="1299">
+                    <div class="card-img">
+                        <img src="/IMG/MacBook Air 15 M3.png" alt="MacBook Air 15">
+                    </div>
+                    <span class="badge-card blue">Ultraligera</span>
+                    <h3>MacBook Air 15" M3</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Apple M3 8-core CPU</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>8GB Unified Memory</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>256GB SSD</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>15.3" Liquid Retina 2880×1864</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>66.5Wh · hasta 18h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>macOS Sonoma</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (8 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">8.900 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('MacBook Air 15 M3', 1299, 'IMG/imagen2')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- MacBook Pro 14" M3 -->
+                <div class="laptop-card" data-category="apple" data-price="1599">
+                    <div class="card-img">
+                        <img src="/IMG/MacBook Pro 14 M3.png" alt="MacBook Pro 14">
+                    </div>
+                    <span class="badge-card purple">Pro</span>
+                    <h3>MacBook Pro 14" M3</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Apple M3 8-core CPU</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>8GB Unified Memory</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>14.2" Liquid Retina XDR</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>70Wh · hasta 22h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>macOS Sonoma</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (6 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">11.000 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('MacBook Pro 14 M3', 1599, 'IMG/imagen3')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- MacBook Pro 14" M3 Pro -->
+                <div class="laptop-card" data-category="apple" data-price="1999">
+                    <div class="card-img">
+                        <img src="/IMG/MacBook Pro 14 M3 Pro.png" alt="MacBook Pro 14 M3 Pro">
+                    </div>
+                    <span class="badge-card purple">Pro Power</span>
+                    <h3>MacBook Pro 14" M3 Pro</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Apple M3 Pro 11-core CPU</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>18GB Unified Memory</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>14.2" Liquid Retina XDR</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>70Wh · hasta 18h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>macOS Sonoma</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (4 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">13.700 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('MacBook Pro 14 M3 Pro', 1999, 'IMG/imagen1')">Comprar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL COMPRA -->
+    <div class="modal-overlay" id="modal-overlay" onclick="closeModal()"></div>
+    <div class="modal-buy" id="modal-buy">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="">
+            <h3 id="modal-title"></h3>
+            <p class="modal-price" id="modal-price"></p>
+            <div class="modal-form">
+                <input type="text" placeholder="Nombre completo" class="modal-input">
+                <input type="email" placeholder="Correo electrónico" class="modal-input">
+                <input type="tel" placeholder="Teléfono" class="modal-input">
+                <input type="text" placeholder="Dirección de envío" class="modal-input">
+                <select class="modal-input">
+                    <option>Cochabamba</option>
+                    <option>La Paz</option>
+                    <option>Santa Cruz</option>
+                    <option>Oruro</option>
+                    <option>Potosí</option>
+                    <option>Tarija</option>
+                    <option>Sucre</option>
+                    <option>Beni</option>
+                    <option>Pando</option>
+                </select>
+                <button class="modal-btn-confirm" onclick="confirmBuy()">Confirmar Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/JS/script.js"></script>
+</body>
+</html>

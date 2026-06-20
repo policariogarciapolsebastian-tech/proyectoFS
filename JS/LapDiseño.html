@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptops de Diseño - CyberNova</title>
+    <link rel="stylesheet" href="/CSS/laptops.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="brand-header">
+        <div class="container brand-header-content">
+            <div class="brand-info">
+                <div class="brand-logo design">✏️</div>
+                <div>
+                    <h1>Laptops de Diseño</h1>
+                    <p>7 laptops disponibles · Precisión cromática para creadores</p>
+                </div>
+            </div>
+            <button class="close-btn" onclick="history.back()">✕</button>
+        </div>
+    </div>
+
+    <!-- Filtros -->
+    <div class="container">
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterLaptops('all', this)">Todos</button>
+            <button class="filter-btn" onclick="filterLaptops('lenovo', this)">Lenovo</button>
+            <button class="filter-btn" onclick="filterLaptops('dell', this)">Dell</button>
+            <button class="filter-btn" onclick="filterLaptops('asus', this)">Asus</button>
+            <button class="filter-btn" onclick="filterLaptops('apple', this)">Apple</button>
+            <button class="filter-btn" onclick="sortLaptops('asc', this)">Menor precio</button>
+            <button class="filter-btn" onclick="sortLaptops('desc', this)">Mayor precio</button>
+        </div>
+    </div>
+
+    <!-- Catálogo -->
+    <section class="catalog">
+        <div class="container">
+            <div class="catalog-grid" id="catalog-grid">
+
+                <!-- Lenovo ThinkPad P1 Gen 6 -->
+                <div class="laptop-card" data-category="lenovo" data-price="2249">
+                    <div class="card-img">
+                        <img src="/IMG/ThinkPad P1 Gen 6.png" alt="ThinkPad P1 Gen 6">
+                    </div>
+                    <span class="badge-card purple">Workstation</span>
+                    <h3>ThinkPad P1 Gen 6</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i9-13950HX</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>32GB DDR5 5600MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>1TB SSD NVMe PCIe 4.0</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 4080 12GB GDDR6</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>16" 4K OLED Touch 100% DCI-P3</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>90Wh · hasta 10h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Pro</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (2 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">15.527 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('ThinkPad P1 Gen 6', 2249, 'IMG/imagen1')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Dell XPS 15 -->
+                <div class="laptop-card" data-category="dell" data-price="1899">
+                    <div class="card-img">
+                        <img src="/IMG/Dell XPS 15 9530.png" alt="Dell XPS 15">
+                    </div>
+                    <span class="badge-card purple">Creator</span>
+                    <h3>Dell XPS 15 9530</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i7-13700H</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>32GB DDR5 4800MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>1TB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 4050 6GB GDDR6</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>15.6" 3.5K OLED Touch 100% DCI-P3</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>86Wh · hasta 11h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Pro</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (4 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">12.500 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('Dell XPS 15 9530', 1899, 'IMG/imagen2')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Dell XPS 13 Plus -->
+                <div class="laptop-card" data-category="dell" data-price="1399">
+                    <div class="card-img">
+                        <img src="/IMG/Dell XPS 13 Plus 9320.png" alt="Dell XPS 13 Plus">
+                    </div>
+                    <span class="badge-card purple">Premium</span>
+                    <h3>Dell XPS 13 Plus 9320</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i7-1360P</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>16GB LPDDR5 6000MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>Intel Iris Xe</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>13.4" 3.5K OLED Touch 100% DCI-P3</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>55Wh · hasta 12h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Pro</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (6 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">9.600 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('Dell XPS 13 Plus', 1399, 'IMG/imagen3')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Asus ProArt Studiobook 16 -->
+                <div class="laptop-card" data-category="asus" data-price="2199">
+                    <div class="card-img">
+                        <img src="/IMG/Asus ProArt Studiobook 16 OLED.png" alt="Asus ProArt Studiobook 16">
+                    </div>
+                    <span class="badge-card purple">Creator</span>
+                    <h3>Asus ProArt Studiobook 16 OLED</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core i9-13980HX</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>64GB DDR5 5600MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>2TB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>RTX 4070 8GB GDDR6</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>16" 4K OLED 100% DCI-P3</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>90Wh · hasta 8h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Pro</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (3 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">15.100 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('Asus ProArt Studiobook 16', 2199, 'IMG/imagen1')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Asus ZenBook Duo 14 -->
+                <div class="laptop-card" data-category="asus" data-price="1699">
+                    <div class="card-img">
+                        <img src="/IMG/Asus ZenBook 14 UX3405.png" alt="Asus ZenBook Duo 14">
+                    </div>
+                    <span class="badge-card purple">Dual Screen</span>
+                    <h3>Asus ZenBook Duo 14 UX8406</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Intel Core Ultra 9 185H</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>32GB LPDDR5X 7467MHz</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>1TB SSD NVMe</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>Intel Arc Graphics</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>14" 3K OLED + 12.7" ScreenPad 100% DCI-P3</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>75Wh · hasta 10h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>Windows 11 Home</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (5 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">11.600 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('Asus ZenBook Duo 14', 1699, 'IMG/imagen2')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- MacBook Pro 14" M3 Pro -->
+                <div class="laptop-card" data-category="apple" data-price="1999">
+                    <div class="card-img">
+                        <img src="/IMG/MacBook Pro 14 M3 Pro.png" alt="MacBook Pro 14 M3 Pro">
+                    </div>
+                    <span class="badge-card purple">Pro Power</span>
+                    <h3>MacBook Pro 14" M3 Pro</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Apple M3 Pro 11-core CPU</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>18GB Unified Memory</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>512GB SSD</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>14-core GPU</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>14.2" Liquid Retina XDR 100% DCI-P3</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>70Wh · hasta 18h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>macOS Sonoma</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (4 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">13.700 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('MacBook Pro 14 M3 Pro', 1999, 'IMG/imagen3')">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- MacBook Pro 16" M3 Max -->
+                <div class="laptop-card" data-category="apple" data-price="3499">
+                    <div class="card-img">
+                        <img src="/IMG/MacBook Pro 16 M3 Max.png" alt="MacBook Pro 16 M3 Max">
+                    </div>
+                    <span class="badge-card purple">Pro Max</span>
+                    <h3>MacBook Pro 16" M3 Max</h3>
+                    <div class="specs-table">
+                        <div class="spec-row"><span>Procesador</span><strong>Apple M3 Max 16-core CPU</strong></div>
+                        <div class="spec-row"><span>RAM</span><strong>36GB Unified Memory</strong></div>
+                        <div class="spec-row"><span>Almacenamiento</span><strong>1TB SSD</strong></div>
+                        <div class="spec-row"><span>Gráficos</span><strong>40-core GPU</strong></div>
+                        <div class="spec-row"><span>Pantalla</span><strong>16.2" Liquid Retina XDR 100% DCI-P3</strong></div>
+                        <div class="spec-row"><span>Batería</span><strong>100Wh · hasta 22h</strong></div>
+                        <div class="spec-row"><span>Sistema</span><strong>macOS Sonoma</strong></div>
+                    </div>
+                    <p class="stock">✓ En stock (2 unidades)</p>
+                    <div class="card-footer-price">
+                        <div>
+                            <span class="price">23.000 Bs</span>
+                        </div>
+                        <button class="btn-buy" onclick="openModal('MacBook Pro 16 M3 Max', 3499, 'IMG/imagen1')">Comprar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL COMPRA -->
+    <div class="modal-overlay" id="modal-overlay" onclick="closeModal()"></div>
+    <div class="modal-buy" id="modal-buy">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="">
+            <h3 id="modal-title"></h3>
+            <p class="modal-price" id="modal-price"></p>
+            <div class="modal-form">
+                <input type="text" placeholder="Nombre completo" class="modal-input">
+                <input type="email" placeholder="Correo electrónico" class="modal-input">
+                <input type="tel" placeholder="Teléfono" class="modal-input">
+                <input type="text" placeholder="Dirección de envío" class="modal-input">
+                <select class="modal-input">
+                    <option>Cochabamba</option>
+                    <option>La Paz</option>
+                    <option>Santa Cruz</option>
+                    <option>Oruro</option>
+                    <option>Potosí</option>
+                    <option>Tarija</option>
+                    <option>Sucre</option>
+                    <option>Beni</option>
+                    <option>Pando</option>
+                </select>
+                <button class="modal-btn-confirm" onclick="confirmBuy()">Confirmar Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/JS/script.js"></script>
+</body>
+</html>
